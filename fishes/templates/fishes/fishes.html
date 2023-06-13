@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" type="" href="{% static 'css/popup.js' %}">
+
+{% block title %} Balıklar {% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<h1>Balıklar</h1>
+<form method="GET" action="{% url 'search' %}">
+    {% csrf_token %}
+    <input type="text" name="search_query" placeholder="Ara">
+    <button type="submit">Ara</button>
+</form>
+<hr>
+<ul style="list-style-type:none;">
+{% for category in categories %}
+    <li style="float:left; margin-right:20px;"><a class="btn btn-primary" href="{% url 'fishes_by_category' category.slug %}" role="button">{{ category.name }}</a></li>
+{% endfor %}
+</ul>
+<br>
+<br>
+{% for fish in fishes %}
+    {% include 'fishes/partials/_fishes.html' %}
+{% endfor %}
+
+{% endblock %}
+
+
+
+<!--    <div class="card mb-3">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-3">-->
+<!--                <img src="{% static 'img/levrek.jpg' %}" alt="" class="img-fluid">-->
+<!--            </div>-->
+<!--            <div class="col-md-9">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Levrek</h5>-->
+<!--                    <p class="card-text">Levrek balığı çok lezzetli bir balık türüdür. Deniz ve tatlı su levreği vardır.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+

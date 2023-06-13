@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ fish.name }} Av Teknikleri{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<h1>{{ fish.name }} Av Teknikleri</h1>
+
+<div class="card mb-3">
+<img class="card-img-top" src="{{ fish.image.url }}" alt="{{ fish.name }}">
+<div class="card-body">
+  <h5 class="card-title">{{ fish.name }}</h5>
+  <p class="card-text">{{ fish.tactic|safe }}</p>
+</div>
+</div>
+{% endblock %}

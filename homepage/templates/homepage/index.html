@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Anasayfa {% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<h1>Sponsorlarımız</h1>
+<hr>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/recai_donmez.jpeg' %}" class="d-block w-100" alt="Slide 1" style="height: 350px">
+      <div class="carousel-caption">
+        <h3>RECAİ DÖNMEZ</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/savas_dursun.jpeg' %}" class="d-block w-100" alt="Slide 2" style="height: 350px">
+      <div class="carousel-caption">
+        <h3>SAVAŞ DURSUN</h3>
+      </div>
+    </div>
+    <!-- Add more slides as needed -->
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+
+<section id="hakkimizda">
+  <div class="container">
+      <h2>Hakkımızda</h2>
+      <hr>
+      <p>Balık ve Balıkçılık Rehberi, balık tutmayı sevenler ve balıkçılık hakkında bilgi edinmek isteyenler
+          için kapsamlı bir kaynak sunmaktadır. Amacımız, doğa tutkunlarına, deniz/sezon balıkçılığına ilgi
+          duyanlara ve yeni başlayanlara balıkçılık konusunda rehberlik etmektir. Sitemizde, farklı balık
+          türleri hakkında bilgi, avlanma teknikleri, ekipman önerileri ve pratik ipuçları bulabilirsiniz.
+          Ayrıca, denizel yaşamı koruma ve sürdürülebilir balıkçılık konularında da bilinçlendirme yapmayı
+          amaçlıyoruz. Balık ve Balıkçılık Rehberi olarak, deneyimli balıkçıların ve doğa severlerin bir araya
+          geldiği bir platform olmayı hedefliyoruz. Keyifli okumalar ve başarılı balık tutmalar dileriz!</p>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+{% endblock %}
+
+
+
+

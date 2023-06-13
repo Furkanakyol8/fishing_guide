@@ -1,0 +1,27 @@
+{% load static %}
+<div class="card mb-3">
+  <img class="card-img-top" src='http://127.0.0.1:8000/images/{{ground.image}}' alt="" style="height: 350px">
+  <div class="card-body">
+    <h5 class="card-title"><a style="color: blue;" title="Bölgedeki balıkları görmek için tıklayınız." data-bs-toggle="modal" data-bs-target='#{{ ground.name }}'>{{ ground.name }} (Balıkları görmek için tıklayınız)</a></h5>
+    <p class="card-text">{{ ground.summarizedDescription }}</p>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="{{ ground.name }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ ground.name }}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      {% for fish in ground.fishes.all %}
+        {% include 'fishes/partials/_fishes.html' %}
+      {% endfor %}
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

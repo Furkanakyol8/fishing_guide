@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% if results %}
+    <h2>Arama Sonuçları:</h2>
+    <ul>
+        {% for fish in results %}
+            {% include 'fishes/partials/_fishes.html' %}
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Aradığınız türde balık bulunmamaktadır.</p>
+{% endif %}
+{% endblock %}

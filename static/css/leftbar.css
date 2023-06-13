@@ -1,0 +1,9 @@
+.left-bar {
+    position: fixed;
+    top: 1;
+    left: 260px;
+    width: 300px; /* Sol kenar çubuğunun genişliğini istediğiniz değere ayarlayın */
+    height: 100%; /* Sol kenar çubuğunun yüksekliğini istediğiniz değere ayarlayın */
+    background-color: white; /* Sol kenar çubuğunun arka plan rengini istediğiniz renge ayarlayın */
+    padding: 10px; /* İçerik arasındaki boşluğu ayarlayın */
+}

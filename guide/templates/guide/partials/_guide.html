@@ -1,0 +1,13 @@
+{% load static %}
+
+<div class="col-md-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="http://127.0.0.1:8000/images/{{guide.image}}" alt="Card image cap" style="height: 200px; object-fit: cover;">
+    <div class="card-body">
+      <h5 class="card-title">{{ guide.name }}</h5>
+      <p class="card-text">{{ guide.summarizedDescription }}..</p>
+      <a href="{% url 'guide_detail' guide.slug %}" class="btn btn-primary">Devamını Oku</a>
+    </div>
+  </div>
+  <br>
+</div>

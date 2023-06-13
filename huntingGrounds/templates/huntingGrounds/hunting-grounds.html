@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Av Bölgeleri {% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<h1> Av Bölgeleri </h1>
+<hr>
+{% for ground in grounds %}
+    {% include 'huntingGrounds/partials/_hunting-grounds.html' %}
+{% endfor %}
+
+{% endblock %}
+
+

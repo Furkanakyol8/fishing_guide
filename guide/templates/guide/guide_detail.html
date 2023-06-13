@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Guide Detayı {% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<h1>{{ guide.name }}</h1>
+<img src="{{ guide.image.url }}" alt="Guide Image">
+{{ guide.description|safe }}
+{% endblock %}

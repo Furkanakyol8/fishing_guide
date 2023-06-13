@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Anasayfa {% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<h2>Rehber Yazılar</h2>
+<hr>
+<div class="row">
+    {% for guide in guides %}
+        {% include 'guide/partials/_guide.html' %}
+    {% endfor %}
+</div>
+
+{% endblock %}
