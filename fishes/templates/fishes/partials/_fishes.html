@@ -11,7 +11,7 @@
                     <h5 class="card-title"><a href="" data-bs-toggle="modal" data-bs-target='#{{ fish.name }}'>{{ fish.name }}</a></h5>
                     <a href="{% url 'fish_tactics' fish.slug %}" class="btn btn-primary">Av Teknikleri</a>
                 </div>
-                <p class="card-text">{{ fish.summarizedDescription }}...</p>
+                <p class="card-text">{{ fish.summarizedDescription|safe }}...</p>
             </div>
         </div>
     </div>
